@@ -24,11 +24,12 @@ platform :ios do
   )
   send_build_to_bugsnag(
     api_key: "91b91acefad3652c939706e5ae1c2450",
-    app_version: "6.0.0",
+    app_version: "9.0.0",
     builder: "matth-bugsnag",
     repository: "https://github.com/matth-bugsnag/fastlane-test",
     metadata: {"test1": "First test", "test2": "Second test", "test3": "Third test"},
-    revision: "cc9d718",
+    revision: "3999740",
+    provider: "github",
     release_stage: "Production",
   )
   end

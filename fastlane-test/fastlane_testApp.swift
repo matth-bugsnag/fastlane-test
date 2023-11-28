@@ -6,9 +6,18 @@
 //
 
 import SwiftUI
+import Bugsnag
 
 @main
 struct fastlane_testApp: App {
+    init() {
+        let config = BugsnagConfiguration.loadConfig()
+
+        config.appVersion = "6.0.0"
+        config.releaseStage = "Production"
+    
+        Bugsnag.start()
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
