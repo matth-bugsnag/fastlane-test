@@ -1,0 +1,35 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :custom_lane do
+  # upload_symbols_to_bugsnag(
+  #      config_file: "/Users/matthew.howells/Documents/Test-Projects/Cocoa/IOS/FastLanePlatTesting/fastlane-test/fastlane-test/Info.plist",
+  #      dsym_path: "/Users/matthew.howells/Library/Developer/Xcode/Archives/2023-01-24/"
+  # )
+  send_build_to_bugsnag(
+    api_key: "91b91acefad3652c939706e5ae1c2450",
+    app_version: "10.1.0",
+    builder: "Matth",
+    repository: "https://github.com/matth-bugsnag/fastlane-test",
+    metadata: {"test1": "First test", "test2": "Second test", "test3": "Third test"},
+    revision: "943b53a",
+    release_stage: "Production",
+  )
+  end
+end
