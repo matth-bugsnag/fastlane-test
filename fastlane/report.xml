@@ -5,17 +5,12 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000873">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000274">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: upload_symbols_to_bugsnag" time="1.806093">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="2: send_build_to_bugsnag" time="0.270207">
+      <testcase classname="fastlane.lanes" name="1: send_build_to_bugsnag" time="0.2624">
         
       </testcase>
     

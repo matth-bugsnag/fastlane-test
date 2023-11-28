@@ -17,20 +17,24 @@ default_platform(:ios)
 
 platform :ios do
   desc "Description of what the lane does"
-  lane :custom_lane do
+  lane :upload_lane do
   upload_symbols_to_bugsnag(
     config_file: "/Users/matthew.howells/Documents/Test-Projects/Cocoa/IOS/FastLanePlatTesting/fastlane-test/fastlane-test/Info.plist",
     dsym_path: "/Users/matthew.howells/Library/Developer/Xcode/DerivedData/fastlane-test-gjxprteyygvaoaavkocjovbzfpoq/Build/Products/Debug-iphonesimulator/fastlane-test.app.dSYM",
   )
+  end
+  lane :build_lane do
   send_build_to_bugsnag(
+    config_file: "/Users/matthew.howells/Documents/Test-Projects/Cocoa/IOS/FastLanePlatTesting/fastlane-test/fastlane-test/Info.plist",
     api_key: "91b91acefad3652c939706e5ae1c2450",
-    app_version: "9.0.0",
+    app_version: "13.0.0",
     builder: "matth-bugsnag",
     repository: "https://github.com/matth-bugsnag/fastlane-test",
     metadata: {"test1": "First test", "test2": "Second test", "test3": "Third test"},
-    revision: "3999740",
+    revision: "1df59bb",
     provider: "github",
     release_stage: "Production",
+    ios_bundle_version: "1",
   )
   end
 end
