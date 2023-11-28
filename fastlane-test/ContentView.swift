@@ -39,7 +39,7 @@ func notifyBugsnag() {
 }
 
 func crashApp() {
-    fatalError("crashing app with fatal error")
+    fatalError("crashing app with fatal error again")
 }
 
 struct ContentView_Previews: PreviewProvider {

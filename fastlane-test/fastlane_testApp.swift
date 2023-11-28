@@ -13,7 +13,7 @@ struct fastlane_testApp: App {
     init() {
         let config = BugsnagConfiguration.loadConfig()
 
-        config.appVersion = "6.0.0"
+        config.appVersion = "11.0.0"
         config.releaseStage = "Production"
     
         Bugsnag.start()
